@@ -146,7 +146,7 @@ module.exports = ( grunt ) ->
           log.writeln 'disconnect', arguments
 
       if data.generatePID and data.pidFile
-        fs.writeFile(data.pidFile, proc.pid)
+        fs.writeFileSync(data.pidFile, proc.pid)
 
       if data.pidFile
         loopUntil ()-> 
